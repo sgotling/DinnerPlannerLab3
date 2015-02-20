@@ -4,8 +4,6 @@
 //function: update (object from model, the event)
 //if event1 do this...
 
-// ikubhdofbijopi//
-
 var DinnerView = function(model) {
 
 	//model.numberOfGuestsChanged.noti
