@@ -5,6 +5,7 @@ $(function() {
 	//And create the needed controllers and views
 	var exampleView = new ExampleView($("#exampleView"));
 	var view = new DinnerView(this.model);
-	view.selectDishImages();
-	view.myDinner();
+	//view.selectDishImages();
+	//view.myDinner();
+	view.ingredients();
 });

@@ -4,7 +4,7 @@
 //function: update (object from model, the event)
 //if event1 do this...
 
-
+// ikubhdofbijopi//
 
 var DinnerView = function(model) {
 
@@ -31,7 +31,7 @@ this.selectDish = function() {
 
 	this.homeleteGrey = function() {
 	}//homeleteGrey end
-
+/*
 	this.myDinner = function() {
 
 		$('#menuDishes').append("<div class='col-sm-4'  color='#??????'>" +
@@ -78,6 +78,8 @@ this.selectDish = function() {
 			i++;
 }
 
+*/
+
 	}//myDinner end
 
 	this.selectDishYellow = function(){
@@ -101,7 +103,7 @@ this.selectDish = function() {
 
 
 
-
+/*
 //Dish.html
 this.dish = function() {
 	$('#dishHead').append(selectedDish.name);
@@ -121,6 +123,22 @@ this.dish = function() {
 		"<button type='button' style='background:orange'>Confirm dish" + 
 		"</button></a>");
 }
+*/
+
+
+
+this.ingredients = function() {
+	var i = 0;
+	while(i < selectedDish.ingredients.length){
+		//console.log(selectedDish.ingredients[i].name);
+		$('#tableElement').append('<tr><td>' + selectedDish.ingredients[i].quantity + 
+		 " " + selectedDish.ingredients[i].unit + '</td><td>' + selectedDish.ingredients[i].name + '</td>' +
+		 '<td>' + selectedDish.ingredients[i].price + " SEK" + '</td></tr>');
+
+		i++;
+	}
+}
+
 
 //dinner_overview.html
 this.dinnerOverview = function() {
