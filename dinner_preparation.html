@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!-- Bootstrap JS-->
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+  <!-- Import the CSS file -->
+  <link rel="stylesheet" href="main.css">
+  <!-- The application JavaScript code. Run only in index? -->
+
+</head>
+
+<body>
+  <div class="inner">
+    <div class="col-sm-12" id="HommeleteGrey" style="background-color:lavender;">    
+      <h1>Hommeleteblabla</h1>
+      - From best chefs in the world directly to your kitchen
+    </div>
+    <div class="col-sm-12" id="selectdish">
+      <div class="col-sm-6">
+        <h1>My Dinner: x people</h1>
+      </div>
+      <div class="col-sm-6">
+        <a href="selectdish.html">
+          <button  type="button" style="float:right; padding:10pt; background:orange">Go back and edit dinner</button>
+        </a>
+      </div>
+    </div>
+
+    <div id='preparationList' ></div>
+    
+
+
+  </div>
+</body>
+
+  <script src="js/app.js"></script>
+  <script src="js/model/dinnerModel.js"></script>
+  <script src="js/view/exampleView.js"></script>
+  <script src="view.js"></script>
+
+</html>
+

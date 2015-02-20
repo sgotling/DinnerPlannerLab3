@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!-- Bootstrap JS-->
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+  <!-- Import the CSS file -->
+  <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+<div style="height: 100%">
+  <div class="col-sm-12" id="HommeleteGrey" style="background-color:lavender;">    
+    <h1>Hommeleteblabla</h1>
+    - From best chefs in the world directly to your kitchen
+  </div>
+  <div class="col-sm-4" id="MyDinner" color="#??????">
+      <h1>
+      My Dinner
+      </h1>
+      <div style>
+      	<input> <!-- Probably to be fixed -->
+        <label for="sel1">Specify number of guests</label>
+
+      </div>           
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Cost</th>
+              <th>Dishes</th>
+            </tr>
+          </thead>
+          <tbody id="menuDishes">
+          </tbody>
+
+        </table>
+      <a href="dinner_overview.html">
+        <button type="button" style=" background:orange">Confirm dinner</button>
+      </a> 
+    </div> 
+    <div class="col-sm-8" >
+      <div class="col-sm-12" id="selectdish">
+        <h1>SELECT DISH</h1>
+			<hr width="100%" color="#000000;">
+          		<div class="row">
+  				  <div class="col-lg-6">
+    				<div class="input-group">
+      				  <input type="text" class="form-control" placeholder="Search for...">
+      				  <span class="input-group-btn">
+        			    <button class="btn btn-default" type="button">Go!</button>
+      				  </span>
+                    </div><!-- /input-group -->
+                 </div><!-- /.col-lg-6 -->
+               </div><!-- /.row -->
+          <div style id="ChooseADish">
+             <select class="form-control" id="sel1">
+              <option>Main dishes</option>
+              <option>Starters</option>
+              <option>Desserts</option>
+              <option>Drink</option>
+              <option>Alkohol</option>
+              <option>
+                <a href="www.example.com">Example Site</a>
+              </option>
+             </select>
+          </div>    
+      </div> <!-- /.selectdish -->     
+
+      <div class="col-sm-12" style="background-color:white;" style="padding:10pt; float:center;" id="selectPICTdish";>
+      	
+
+	     
+      </div> <!-- /.selectPICTdish -->
+    </div>
+     
+</div>
+
+  <!-- The application JavaScript code. Run only in index? -->
+  <script src="js/app.js"></script>
+  <script src="js/model/dinnerModel.js"></script>
+  <script src="js/view/exampleView.js"></script>
+  <script src="js/view/exampleViewController.js"></script>
+  <script src="view.js"></script>
+  
+
+
+
+ 
+
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!-- Bootstrap JS-->
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+  <!-- Import the CSS file -->
+  <link rel="stylesheet" href="main.css">
+  <!-- The application JavaScript code. Run only in index? -->
+
+  
+</head>
+
+<body>
+<div style="height: 100%">
+  <div class="col-sm-12" id="HommeleteGrey" style="background-color:lavender;">    
+    <h1>Hommeleteblabla</h1>
+    - From best chefs in the world directly to your kitchen
+  </div>
+    <div class="col-sm-4" id="MyDinner" color="#??????">
+      <h1>
+      My Dinner
+      </h1>
+      <div style>
+        <input> <!-- Probably to be fixed -->
+        <label for="sel1">Specify number of guests</label>
+
+      </div>           
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Cost</th>
+              <th>Dishes</th>
+            </tr>
+          </thead>
+          <tbody id="menuDishes">
+          </tbody>
+
+        </table>
+      <a href="dinner_overview.html">
+        <button type="button" style=" background:orange">Confirm dinner</button>
+      </a>  
+    </div> 
+  <div class="col-sm-8" id="Dish">
+    <div class="col-sm-6">
+      <h1 id="dishHead"></h1>
+      <div width="100%" color="#000000;" id='dishImage'>
+      </div>
+    </div>
+    <div class="col-sm-6" id="ing">
+      <table class="table" id="ingTable">
+            <thead>
+              <tr>
+                <th width="5%">Quantity</th>
+                <th width="10%">Ingredient</th>
+                <th width="40%">Price</th>
+              </tr>
+            </thead>
+            <tbody id='tableElement'>
+            </tbody>
+          </table>
+ 
+    </div>
+    <div class="col-sm-6" id="theDish">      
+    </div> <!-- /.theDish -->     
+
+  </div>
+  <div class="col-sm-8" style="padding:10pt">
+    <div class="col-sm-12" style='padding:10px'>
+      <a href="selectdish.html">
+        <button type="button" style=" background:orange">Go back and edit dinner</button>
+      </a>      
+    </div> 
+    <p>
+    <h4>PREPARATION</h4>
+    </p>
+    <p id='dishPreparation'>
+    </p>
+  </div>    
+</div>
+ 
+
+
+  <script src="js/app.js"></script>
+  <script src="js/model/dinnerModel.js"></script>
+  <script src="js/view/exampleView.js"></script>
+  <script src="js/view/exampleViewController.js"></script>
+  <script src="view.js"></script>
+
+
+
+</body>
+
+</html>
