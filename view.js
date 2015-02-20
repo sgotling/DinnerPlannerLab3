@@ -1,5 +1,17 @@
+
+//add view objects to model
+
+//function: update (object from model, the event)
+//if event1 do this...
+
+
+
+var DinnerView = function(model) {
+
+	//model.numberOfGuestsChanged.noti
+
 var type = "starter"
-var model = new DinnerModel;
+//var model = new DinnerModel;
 model.addDishToMenu(3);
 model.addDishToMenu(1); 
 model.addDishToMenu(2); 
@@ -11,59 +23,87 @@ var selectedDish = menu[2];
 
 
 
-
-
-//add view objects to model
-
-//function: update (object from model, the event)
-//if event1 do this...
-
-
-
-
-
-
 //selectdish.html
-var Selectdish = function() {
-	var index = 0;
+this.selectDish = function() {
+	}
+
+	
+
+	this.homeleteGrey = function() {
+	}//homeleteGrey end
+
+	this.myDinner = function() {
+
+		$('#menuDishes').append("<div class='col-sm-4'  color='#??????'>" +
+		      + "<h1>My Dinner</h1>" +
+		      + "<div style>" +
+		      	"<input> <!-- Probably to be fixed -->"+
+		        "<label for="sel1">Specify number of guests</label>"+
+		      "</div>" +           
+		        "<table class="table">" + 
+		          "<thead>" + 
+		            "<tr>" + 
+		              "<th>Cost</th>" + 
+		              "<th>Dishes</th>" + 
+		            "</tr>" + 
+		          "</thead>" + 
+		          "<tbody id="menuDishes">" + 
+		          "</tbody>" + 
+		        "</table>" + 
+		      "<a href="dinner_overview.html">" + 
+		        "<button type="button" style=" background:orange">Confirm dinner</button>" + 
+		      "</a>" + 
+		    "</div>"); 
+
+
+
+
+
+
+
+	var i = 0;
+		while(i < menu.length){
+			var price=0;
+			var j = 0;
+			while(j < menu[i].ingredients.length){
+				//console.log(menu[i] + menu[i].ingredients[j].price);
+				price = price + menu[i].ingredients[j].price;
+				//console.log(price);
+				j++;
+			}
+			$('#menuDishes').append('<tr><td>' + price * numberOfGuests + ' SEK' + '</td><td>' + menu[i].name + '</td></tr>');
+			i++;
+		}
+		$('#menuDishes').append('<tr><td>' + totalPrice + ' SEK' + '</td><td>Total</td></tr>');
+			i++;
+}
+
+	}//myDinner end
+
+	this.selectDishYellow = function(){
+	}//selectDishYellow end
+
+	this.selectDishImages = function() {
+		var index = 0;
 	while(index < dishes.length){
 		//console.log(dishes[index].name);
-	    $('#selectPICTdish').append("<div class='img'>" +
+		$('#selectPICTdish').append("<div class='img'>" +
 		"<a href='dish.html' id='" + dishes[index].name + "'>" +
 			"<img src=" + "images/" + dishes[index].image + " width='110' height='90'>" +
 			"<div class='desc'>" + dishes[index].name + "</div>" + 
-		"</div>" +
-		"<script>" +
-		"$('#" + dishes[index].name + "').click(function() {" +
-			"alert('hej');" +
-		"});" +
-		"</script>");
+		"</div>");
 		index++;
-	}
-	//model.addDishToMenu(100);
-	//console.log("hit");
-	var i = 0;
-	while(i < menu.length){
-		var price=0;
-		var j = 0;
-		while(j < menu[i].ingredients.length){
-			//console.log(menu[i] + menu[i].ingredients[j].price);
-			price = price + menu[i].ingredients[j].price;
-			//console.log(price);
-			j++;
-		}
-		$('#menuDishes').append('<tr><td>' + price * numberOfGuests + ' SEK' + '</td><td>' + menu[i].name + '</td></tr>');
-		i++;
-	}
-	$('#menuDishes').append('<tr><td>' + totalPrice + ' SEK' + '</td><td>Total</td></tr>');
-		i++;
-}
+	}//myDinner end
+	
+
+
+
 
 
 
 
 //Dish.html
-var Dish = function() {
+this.dish = function() {
 	$('#dishHead').append(selectedDish.name);
 	$('#dishImage').append("<img src='images/" + selectedDish.image + "' alt='Klematis' class='img-thumbnail' alt='Cinque Terre' width='304' height='236'>");
 	$('#dishPreparation').append(selectedDish.description);
@@ -83,7 +123,7 @@ var Dish = function() {
 }
 
 //dinner_overview.html
-var DinnerOverview = function() {
+this.dinnerOverview = function() {
 	var index = 0;
 	while(index < menu.length){
 	    $('#overviewPict').append("<div class='img'>" +
@@ -105,7 +145,7 @@ var DinnerOverview = function() {
 
 
 //dinner_preparation.html
-var DinnerPreparation = function() {
+this.dinnerPreparation = function() {
 var i = 0;
 while(i < menu.length){
 	//console.log(selectedDish.ingredients[i].name);
@@ -143,3 +183,6 @@ $('#addOne').click(function() {
 	    	"</div>");
 });
 */
+
+
+}//DinnerView end

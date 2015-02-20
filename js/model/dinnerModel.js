@@ -3,6 +3,12 @@
 
 //DinnerModel Object constructor
 
+
+
+
+
+
+
 var DinnerModel = function() {
  
 	//TODO Lab 2 implement the data structure that will hold number of guest
@@ -10,11 +16,15 @@ var DinnerModel = function() {
     var numberOfGuests = 1;
     var menu = [];
     
+    //this.numberOfGuestsChanged = new Event();
+    //this.menuChanged = new Event();
+
 
 
 	this.setNumberOfGuests = function(num) {
 		//TODO Lab 2
 	    numberOfGuests = num;
+	    //numberOfGuestsChanged.notifyObservers(num);
 	}
 
 	// should return 
@@ -22,7 +32,8 @@ var DinnerModel = function() {
 		//TODO Lab 2
 	    return numberOfGuests;
 	    
-	    
+
+
 	}
 
 	//Returns the dish that is on the menu for selected type 
@@ -43,10 +54,7 @@ var DinnerModel = function() {
 	    
 	   
 	    return menu[index];
-	    
-
-	    
-	    
+	     
 
 
 	}
@@ -117,6 +125,8 @@ var DinnerModel = function() {
 	    //menu[index] = dish;
 	    //Ta bort sen när adddishtomenu är fixad. Använd ovan!!!!!
 	    menu.push(dish);
+	    //menuChanged.notifyObservers(menu);
+
 	}
 
 	//Removes dish from menu
@@ -130,8 +140,9 @@ var DinnerModel = function() {
 			}
 		 else{
 		     index += 1;
-		     }
+		     } 
 		}
+		menuChanged.notifyObservers(menu);
 	}
 
 	//function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")
