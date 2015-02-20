@@ -21,42 +21,38 @@ var selectedDish = menu[2];
 
 
 
+
 //selectdish.html
 this.selectDish = function() {
-	}
+	}//selectDish end
 
 	
 
 	this.homeleteGrey = function() {
 	}//homeleteGrey end
-/*
+
 	this.myDinner = function() {
 
-		$('#menuDishes').append("<div class='col-sm-4'  color='#??????'>" +
+		$('#myDinner').append("<div class='col-sm-4'  color='#??????'>" +
 		      + "<h1>My Dinner</h1>" +
 		      + "<div style>" +
 		      	"<input> <!-- Probably to be fixed -->"+
-		        "<label for="sel1">Specify number of guests</label>"+
+		        "<label for='sel1'>Specify number of guests</label>"+
 		      "</div>" +           
-		        "<table class="table">" + 
+		        "<table class='table'>" + 
 		          "<thead>" + 
 		            "<tr>" + 
 		              "<th>Cost</th>" + 
 		              "<th>Dishes</th>" + 
 		            "</tr>" + 
 		          "</thead>" + 
-		          "<tbody id="menuDishes">" + 
+		          "<tbody id='menuDishes'>" + 
 		          "</tbody>" + 
 		        "</table>" + 
-		      "<a href="dinner_overview.html">" + 
-		        "<button type="button" style=" background:orange">Confirm dinner</button>" + 
+		      "<a href='dinner_overview.html''>" + 
+		        "<button type='button' style=' background:orange'>Confirm dinner</button>" + 
 		      "</a>" + 
 		    "</div>"); 
-
-
-
-
-
 
 
 	var i = 0;
@@ -74,9 +70,7 @@ this.selectDish = function() {
 		}
 		$('#menuDishes').append('<tr><td>' + totalPrice + ' SEK' + '</td><td>Total</td></tr>');
 			i++;
-}
 
-*/
 
 	}//myDinner end
 
@@ -93,7 +87,8 @@ this.selectDish = function() {
 			"<div class='desc'>" + dishes[index].name + "</div>" + 
 		"</div>");
 		index++;
-	}//myDinner end
+	}
+}//selectDishImages end
 	
 
 
@@ -101,7 +96,7 @@ this.selectDish = function() {
 
 
 
-/*
+
 //Dish.html
 this.dish = function() {
 	$('#dishHead').append(selectedDish.name);
@@ -120,8 +115,8 @@ this.dish = function() {
 	$('#tableElement').append("<a href='selectdish.html'>" + 
 		"<button type='button' style='background:orange'>Confirm dish" + 
 		"</button></a>");
-}
-*/
+}//dish end
+
 
 
 
@@ -135,7 +130,7 @@ this.ingredients = function() {
 
 		i++;
 	}
-}
+}//ingredients end
 
 
 //dinner_overview.html
@@ -153,7 +148,7 @@ this.dinnerOverview = function() {
 		"</script>");
 		index++;
 	}
-}
+}//dinnerOverview end
 /*
 	$('#overviewPict').append("<a href='dish.html'>" + 
             "<img src=images/" + menu[i].image + " width='110' height='90'></a>");
@@ -187,10 +182,10 @@ while(i < menu.length){
         "</p></div></div>");
 	i++;
 }
-}
+}//dinnerPreparation end
 
 
-/*
+
 $('#addOne').click(function() {
 	    $('#selectPICTdish').append("<div class='img'>" +
 	    	"<a href='dish.html'>" +
@@ -198,7 +193,11 @@ $('#addOne').click(function() {
 	    		"<div class='desc'>Add a description of the image here</div>" + 
 	    	"</div>");
 });
-*/
+
 
 
 }//DinnerView end
+
+
+
+
