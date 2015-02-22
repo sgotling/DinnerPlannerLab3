@@ -108,8 +108,8 @@ $('body').append("<div style='height: 100%'>" +
   while(index < dishes.length){
     //console.log(dishes[index].name);
     $('#selectPICTdish').append("<div class='img'>" +
-    "<a id='" + dishes[index].name + " ' class='clickAbleDish'>" +
-      "<img src=" + "images/" + dishes[index].image + " width='110' height='90'>" +
+    "<a id='" + dishes[index].id + " ' class='clickAbleDish'>" +
+      "<img  src=" + "images/" + dishes[index].image + " width='110' height='90'>" +
       "<div class='desc'>" + dishes[index].name + "</div>" + 
     "</div>");
     index++;
@@ -125,11 +125,14 @@ $("#selectDishToDinnerOverview").click(function() {
   mainView.refresh();})
 
 
-$(".clickAbleDish").click(function() {
+$(".clickAbleDish").click(function(e) {
+
+  var id = $(this).attr('id');
+  dish = model.getDish(id);
+  mainView.selectedDish = dish;
   mainView.page = "dish";
-  mainView.refresh();})
-
-
+  mainView.refresh()
+  ;})
 
 
 }

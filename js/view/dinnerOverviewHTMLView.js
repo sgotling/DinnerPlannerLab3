@@ -36,7 +36,7 @@ var dinnerOverviewHTMLView = function(model){
 	var index = 0;
 		while(index < menu.length){
 		    $('#overviewPict').append("<div class='img'>" +
-			"<a href='dish.html' id='" + menu[index].name + "'>" +
+			"<a id='" + menu[index].id + "' class='clickAbleDish'>" +
 				"<img src=" + "images/" + menu[index].image + " width='110' height='90'>" +
 				"<div class='desc'>" + menu[index].name + "</div>" + 
 			"</div>" +
@@ -56,6 +56,16 @@ $("#dinnerOverviewToDinnerPreparation").click(function() {
   
   mainView.page = "dinnerPreparation"
   mainView.refresh();})
+
+
+$(".clickAbleDish").click(function(e) {
+
+  var id = $(this).attr('id');
+  dish = model.getDish(id);
+  mainView.selectedDish = dish;
+  mainView.page = "dish";
+  mainView.refresh()
+  ;})
 
 
 

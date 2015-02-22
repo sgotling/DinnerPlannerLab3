@@ -5,7 +5,9 @@ var dishHTMLView = function (model) {
   var model = model;
   var menu = model.getFullMenu();
 
-  var selectedDish = menu[2];
+  //var selectedDish = menu[2];
+
+  var selectedDish = mainView.selectedDish;
 
   var dishes = model.getAllDishes(type);
   var totalPrice = model.getTotalMenuPrice();
@@ -87,6 +89,41 @@ $('body').append("<div style='height: 100%'>" +
   }
   $('#tableElement').append("<button id='confirmDish' type='button' style='background:orange'>Confirm dish" + 
     "</button></a>");
+
+
+
+  $('#myDinner').append("<div class='col-sm-4'  color='#??????'>" +
+      + "<h1>My Dinner</h1>" +
+      + "<div style>" +
+        "<input> <!-- Probably to be fixed -->"+
+        "<label for='sel1'>Specify number of guests</label>"+
+      "</div>" +           
+        "<table class='table'>" + 
+          "<thead>" + 
+            "<tr>" + 
+              "<th>Cost</th>" + 
+              "<th>Dishes</th>" + 
+            "</tr>" + 
+          "</thead>" + 
+          "<tbody id='menuDishes'>" + 
+          "</tbody>" + 
+        "</table>" + 
+    "</div>");
+    var i = 0;
+      while(i < menu.length){
+        var price=0;
+        var j = 0;
+        while(j < menu[i].ingredients.length){
+          //console.log(menu[i] + menu[i].ingredients[j].price);
+          price = price + menu[i].ingredients[j].price;
+          //console.log(price);
+          j++;
+        }
+        $('#menuDishes').append('<tr><td>' + price * numberOfGuests + ' SEK' + '</td><td>' + menu[i].name + '</td></tr>');
+        i++;
+      }
+      $('#menuDishes').append('<tr><td>' + totalPrice + ' SEK' + '</td><td>Total</td></tr>');
+        i++; 
 
 
   $("#dishToSelectDish").click(function() {

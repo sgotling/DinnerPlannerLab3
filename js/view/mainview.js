@@ -12,7 +12,7 @@ var dishes = model.getAllDishes(type);
 var totalPrice = model.getTotalMenuPrice();
 var numberOfGuests = model.getNumberOfGuests();
 
-this.selectedDish = menu[2];
+this.selectedDish = menu[0];
  this.page="";
 
 
