@@ -3,7 +3,10 @@ $(function() {
 	this.model = new DinnerModel();
 
 	mainView = new MainView(this.model);
-	
+	mainView.page="dinnerPreparation";
+	mainView.refresh()
+
+
 	//And create the needed controllers and views
 	//var exampleView = new ExampleView($("#exampleView"));
 	//var view = new DinnerView(this.model);

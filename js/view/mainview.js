@@ -13,36 +13,45 @@ var totalPrice = model.getTotalMenuPrice();
 var numberOfGuests = model.getNumberOfGuests();
 
 this.selectedDish = menu[2];
+ this.page="";
 
 
-this.page = "start";
+//list
 
-switch(this.page) {
-    case "dinnerPreparation":
-        $("body").empty();
-		var dinnerPreparationView = new dinnerPreparationHTMLView(model);
 
-        break;
-    case "dinnerOverview":
-        $("body").empty();
-		var dinnerOverviewView = new dinnerOverviewHTMLView(model);
+//bind listener to model
+//model.
 
-        break;
-    case "dish":
-        $("body").empty();
-		var dishView = new dishHTMLView(model);
-        break;
-    case "selectDish":
-        $("body").empty();
-		var selectDishView = new selectDishHTMLView(model);
-        break;
-    case "start":
-        $("body").empty();
-		var startView = new startHTMLView(model);
-        break;
+
+
+this.refresh = function () {
+	var page = this.page
+
+	switch(page) {
+	    case "dinnerPreparation":
+	        
+			var dinnerPreparationView = new dinnerPreparationHTMLView(model);
+
+	        break;
+	    case "dinnerOverview":
+	        
+			var dinnerOverviewView = new dinnerOverviewHTMLView(model);
+
+	        break;
+	    case "dish":
+	        $("body").empty();
+			var dishView = new dishHTMLView(model);
+	        break;
+	    case "selectDish":
+	        $("body").empty();
+			var selectDishView = new selectDishHTMLView(model);
+	        break;
+	    case "start":
+	        $("body").empty();
+			var startView = new startHTMLView(model);
+	        break;
+	}
 }
-
-
 
 
 

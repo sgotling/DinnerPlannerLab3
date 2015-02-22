@@ -1,5 +1,6 @@
 
 var dinnerPreparationHTMLView = function(model){
+  $("body").empty();
   var type = "main dish"
 
   var model = model;

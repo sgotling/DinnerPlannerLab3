@@ -1,11 +1,4 @@
-//OBS!!!!!!!!!!! addDishToMenu FUNGERAR INTE SOM DEN SKA!!!!!!!!!!!!!!!!!!!!!!!!!
-
-
 //DinnerModel Object constructor
-
-
-
-
 
 
 
@@ -16,15 +9,14 @@ var DinnerModel = function() {
     var numberOfGuests = 1;
     var menu = [];
     
-    //this.numberOfGuestsChanged = new Event();
-    //this.menuChanged = new Event();
-
+    this.numberOfGuestsChanged = new Event();
+    this.menuChanged = new Event();
 
 
 	this.setNumberOfGuests = function(num) {
 		//TODO Lab 2
 	    numberOfGuests = num;
-	    //numberOfGuestsChanged.notifyObservers(num);
+	    this.numberOfGuestsChanged.notifyObservers();
 	}
 
 	// should return 
@@ -125,7 +117,7 @@ var DinnerModel = function() {
 	    menu[index] = dish;
 	    //Ta bort sen när adddishtomenu är fixad. Använd ovan!!!!!
 	    //menu.push(dish);
-	    //menuChanged.notifyObservers(menu);
+	    //this.menuChanged.notifyObservers();
 
 	}
 
@@ -142,7 +134,7 @@ var DinnerModel = function() {
 		     index += 1;
 		     } 
 		}
-		//menuChanged.notifyObservers(menu);
+		menuChanged.notifyObservers();
 	}
 
 	//function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")

@@ -1,13 +1,13 @@
 var Event = function(){
-	this.observers
+	this.observers = [];
 
     this.addObserver = function(observer) {
-    	observers.push(observer);
+    	this.observers.push(observer);
     }//addObserver end
 
-   this.notifyObservers = function(obj) {
+   this.notifyObservers = function() {
     	for(var i = 0; i< this._observers.length; i++){
-    		observers[i](this, obj);
+    		observers[i]();
     	}
     }
 
