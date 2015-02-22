@@ -21,9 +21,7 @@ var dinnerOverviewHTMLView = function(model){
 	        "<h1>My Dinner: x people</h1>" +
 	     " </div>" +
 	      "<div class='col-sm-6'>" +
-	        "<a href='selectdish.html'>" +
-	          "<button  type='button' style='float:right; padding:10pt; background:orange'>Go back and edit dinner</button>" +
-	        "</a>" +
+	          "<button id='dinnerOverviewToSelectDish' type='button' style='float:right; padding:10pt; background:orange'>Go back and edit dinner</button>" +
 	      "</div>" +
 	    "</div>" +
 	    "<div class='col-sm-12 col-centered' id='dishOverview'>" +
@@ -31,9 +29,7 @@ var dinnerOverviewHTMLView = function(model){
 	        "</div>" +
 	    "</div>" +
 	    "<div class='col-sm-12'>" +
-	      "<a href='dinner_preparation.html'>" +
-	        "<button  type='button' style='padding:10pt; background:orange'>Print Full Recipe</button>" +
-	      "</a>" +
+	        "<button id='dinnerOverviewToDinnerPreparation' type='button' style='padding:10pt; background:orange'>Print Full Recipe</button>" +
 	    "</div>" +
 	  "</div>");
 
@@ -50,4 +46,18 @@ var dinnerOverviewHTMLView = function(model){
 			"</script>");
 			index++;
 		}
+
+$("#dinnerOverviewToSelectDish").click(function() {
+  
+  mainView.page = "selectDish"
+  mainView.refresh();})
+
+$("#dinnerOverviewToDinnerPreparation").click(function() {
+  
+  mainView.page = "dinnerPreparation"
+  mainView.refresh();})
+
+
+
+
 }

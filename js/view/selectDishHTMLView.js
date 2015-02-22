@@ -33,9 +33,7 @@ $('body').append("<div style='height: 100%'>" +
           "<tbody id='menuDishes'>" +
          "</tbody>" +
         "</table>" +
-      "<a href='dinner_overview.html'>" +
-        "<button type='button' style=' background:orange'>Confirm dinner</button>" +
-     "</a>" +
+        "<button id='selectDishToDinnerOverview' type='button' style=' background:orange'>Confirm dinner</button>" +
     "</div>" +
     "<div class='col-sm-8' >" +
       "<div class='col-sm-12' id='selectdish'>" +
@@ -86,9 +84,6 @@ $('body').append("<div style='height: 100%'>" +
               "<tbody id='menuDishes'>" + 
               "</tbody>" + 
             "</table>" + 
-          "<a href='dinner_overview.html''>" + 
-            "<button type='button' style=' background:orange'>Confirm dinner</button>" + 
-          "</a>" + 
         "</div>"); 
 
 
@@ -113,12 +108,28 @@ $('body').append("<div style='height: 100%'>" +
   while(index < dishes.length){
     //console.log(dishes[index].name);
     $('#selectPICTdish').append("<div class='img'>" +
-    "<a href='dish.html' id='" + dishes[index].name + "'>" +
+    "<a id='" + dishes[index].name + " ' class='clickAbleDish'>" +
       "<img src=" + "images/" + dishes[index].image + " width='110' height='90'>" +
       "<div class='desc'>" + dishes[index].name + "</div>" + 
     "</div>");
     index++;
   }
+
+$("#selectDishToDinnerOverview").click(function() {
+  mainView.page = "dinnerOverview";
+  mainView.refresh();})
+
+
+$("#selectDishToDinnerOverview").click(function() {
+  mainView.page = "dinnerOverview";
+  mainView.refresh();})
+
+
+$(".clickAbleDish").click(function() {
+  mainView.page = "dish";
+  mainView.refresh();})
+
+
 
 
 }

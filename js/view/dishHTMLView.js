@@ -33,9 +33,7 @@ $('body').append("<div style='height: 100%'>" +
  "         <tbody id='menuDishes'>" +
  "         </tbody>" +
  "       </table>" +
-"      <a href='dinner_overview.html'>" +
-"        <button type='button' style=' background:orange'>Confirm dinner</button>" +
-"      </a>  " +
+"        <button id='dishToDinnerOverview' type='button' style=' background:orange'>Confirm dinner</button>" +
 "    </div> " +
 "  <div class='col-sm-8' id='Dish'>" +
 "    <div class='col-sm-6'>" +
@@ -61,9 +59,7 @@ $('body').append("<div style='height: 100%'>" +
 "  </div>" +
 "  <div class='col-sm-8' style='padding:10pt'>" +
 "    <div class='col-sm-12' style='padding:10px'>" +
-"      <a href='selectdish.html'>" +
-"        <button type='button' style=' background:orange'>Go back and edit dinner</button>" +
-"      </a>      " +
+"        <button id='dishToSelectDish' type='button' style=' background:orange'>Go back and edit dinner</button>" +
 "    </div> " +
 "    <p>" +
 "    <h4>PREPARATION</h4>" +
@@ -89,9 +85,26 @@ $('body').append("<div style='height: 100%'>" +
 
     i++;
   }
-  $('#tableElement').append("<a href='selectdish.html'>" + 
-    "<button type='button' style='background:orange'>Confirm dish" + 
+  $('#tableElement').append("<button id='confirmDish' type='button' style='background:orange'>Confirm dish" + 
     "</button></a>");
+
+
+  $("#dishToSelectDish").click(function() {
+  mainView.page = "selectDish"
+  mainView.refresh();})
+
+  $("#dishToDinnerOverview").click(function() {
+  mainView.page = "dinnerOverview"
+  mainView.refresh();})
+
+  $("#confirmDish").click(function() {
+  mainView.page = "selectDish"
+  mainView.refresh();})
+
+
+
+
+
 //dish end
 }
 

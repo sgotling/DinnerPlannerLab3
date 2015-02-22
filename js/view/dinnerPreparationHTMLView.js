@@ -21,9 +21,7 @@ var dinnerPreparationHTMLView = function(model){
           "<h1>My Dinner: x people</h1>" +
         "</div>" +
         "<div class='col-sm-6'>" +
-          "<a href='selectdish.html'>" +
-            "<button  type='button' style='float:right; padding:10pt; background:orange'>Go back and edit dinner</button>" +
-          "</a>" +
+            "<button id='dinnerPreparationToSelectDish' type='button' style='float:right; padding:10pt; background:orange'>Go back and edit dinner</button>" +
         "</div>" +
       "</div>" +
       "<div id='preparationList' ></div>" +
@@ -54,4 +52,11 @@ var dinnerPreparationHTMLView = function(model){
           "</p></div></div>");
     i++;
   }
+
+  $("#dinnerPreparationToSelectDish").click(function() {
+  
+  mainView.page = "selectDish"
+  mainView.refresh();})
+
+
 }

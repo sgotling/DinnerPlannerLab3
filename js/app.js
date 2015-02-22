@@ -4,7 +4,11 @@ $(function() {
 
 	mainView = new MainView(this.model);
 	mainView.page="dinnerPreparation";
-	mainView.refresh()
+	mainView.refresh();
+
+	mainView.page="start";
+	this.model.setNumberOfGuests(2);
+
 
 
 	//And create the needed controllers and views

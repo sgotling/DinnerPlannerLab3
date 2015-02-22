@@ -42,8 +42,7 @@ var DinnerModel = function() {
 
 	    if(type == "dessert"){
 		index = 2;
-	    }
-	    
+	    } 
 	   
 	    return menu[index];
 	     

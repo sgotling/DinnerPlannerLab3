@@ -6,8 +6,8 @@ var Event = function(){
     }//addObserver end
 
    this.notifyObservers = function() {
-    	for(var i = 0; i< this._observers.length; i++){
-    		observers[i]();
+    	for(var i = 0; i< this.observers.length; i++){
+    		this.observers[i]();
     	}
     }
 

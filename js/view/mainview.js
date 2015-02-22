@@ -16,12 +16,19 @@ this.selectedDish = menu[2];
  this.page="";
 
 
-//list
+var _this = this;
+
+
 
 
 //bind listener to model
-//model.
+model.numberOfGuestsChanged.addObserver(function () {
+	_this.refresh();
+});
 
+model.menuChanged.addObserver(function () {
+	_this.refresh();
+});
 
 
 this.refresh = function () {
@@ -53,16 +60,9 @@ this.refresh = function () {
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 }
+
+
+
+
+
