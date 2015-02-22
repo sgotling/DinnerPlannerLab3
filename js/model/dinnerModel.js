@@ -122,9 +122,9 @@ var DinnerModel = function() {
 		index = 2;
 	    }
 
-	    //menu[index] = dish;
+	    menu[index] = dish;
 	    //Ta bort sen när adddishtomenu är fixad. Använd ovan!!!!!
-	    menu.push(dish);
+	    //menu.push(dish);
 	    //menuChanged.notifyObservers(menu);
 
 	}
@@ -142,7 +142,7 @@ var DinnerModel = function() {
 		     index += 1;
 		     } 
 		}
-		menuChanged.notifyObservers(menu);
+		//menuChanged.notifyObservers(menu);
 	}
 
 	//function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")

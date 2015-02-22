@@ -10,7 +10,6 @@ var DinnerView = function(model) {
 
 var type = "starter"
 //var model = new DinnerModel;
-
 model.addDishToMenu(3);
 model.addDishToMenu(1); 
 model.addDishToMenu(2); 
