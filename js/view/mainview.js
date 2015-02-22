@@ -11,28 +11,49 @@ var menu = model.getFullMenu();
 var dishes = model.getAllDishes(type);
 var totalPrice = model.getTotalMenuPrice();
 var numberOfGuests = model.getNumberOfGuests();
-var selectedDish = menu[2];
+
+this.selectedDish = menu[2];
+
+
+this.page = "start";
+
+switch(this.page) {
+    case "dinnerPreparation":
+        $("body").empty();
+		var dinnerPreparationView = new dinnerPreparationHTMLView(model);
+
+        break;
+    case "dinnerOverview":
+        $("body").empty();
+		var dinnerOverviewView = new dinnerOverviewHTMLView(model);
+
+        break;
+    case "dish":
+        $("body").empty();
+		var dishView = new dishHTMLView(model);
+        break;
+    case "selectDish":
+        $("body").empty();
+		var selectDishView = new selectDishHTMLView(model);
+        break;
+    case "start":
+        $("body").empty();
+		var startView = new startHTMLView(model);
+        break;
+}
 
 
 
-$("body").empty();
-var dinnerPreparationView = new dinnerPreparationHTMLView(model);
 
 
-$("body").empty();
-var dinnerOverviewView = new dinnerOverviewHTMLView(model);
 
 
-$("body").empty();
-var dishView = new dishHTMLView(model);
 
 
-$("body").empty();
-var selectDishView = new selectDishHTMLView(model);
 
 
-$("body").empty();
-var startView = new startHTMLView(model);
+
+
 
 
 }
