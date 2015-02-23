@@ -1,16 +1,12 @@
 $(function() {
-	//We instantiate our model
+	
+	//Här skapar vi model, views och controller
 	this.model = new DinnerModel();
-
 	mainView = new MainView(this.model);
-	mainView.page="dinnerPreparation";
+	mainView.page="start";
 	mainView.refresh();
 
-	mainView.page="start";
-	this.model.setNumberOfGuests(2);
-
-
-
+	//We instantiate our model
 	//And create the needed controllers and views
 	//var exampleView = new ExampleView($("#exampleView"));
 	//var view = new DinnerView(this.model);

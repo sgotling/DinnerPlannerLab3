@@ -1,4 +1,4 @@
-
+//Det är detta objekt som bestämer vilken view som ska visas. För att ändra view: mainView.page="nyaSidan" mainView.refresh()
 var MainView = function (model) {
 
 
@@ -21,11 +21,10 @@ var _this = this;
 
 
 
-//bind listener to model
+//Binder till model. Om det ändras i några av dessa funktioner kommer den aktuella sidan att upptateras.
 model.numberOfGuestsChanged.addObserver(function () {
 	_this.refresh();
 });
-
 model.menuChanged.addObserver(function () {
 	_this.refresh();
 });

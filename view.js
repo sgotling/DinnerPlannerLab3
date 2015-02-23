@@ -1,3 +1,5 @@
+//Denna fil ska troligtvis inte används. Ska dubbelkolla saken.
+
 
 //add view objects to model
 

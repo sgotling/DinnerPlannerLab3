@@ -1,7 +1,5 @@
 //DinnerModel Object constructor
 
-
-
 var DinnerModel = function() {
  
 	//TODO Lab 2 implement the data structure that will hold number of guest
@@ -9,6 +7,7 @@ var DinnerModel = function() {
     var numberOfGuests = 1;
     var menu = [];
     
+    //Här är kommer refresh-metoden från mainView att lägas in.
     this.numberOfGuestsChanged = new Event();
     this.menuChanged = new Event();
 

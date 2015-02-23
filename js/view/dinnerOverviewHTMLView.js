@@ -1,4 +1,4 @@
-
+//När deta objekt skapas visas fönstret för dinnerOverview
 var dinnerOverviewHTMLView = function(model){
 	$("body").empty();
   var type = "main dish"
@@ -11,6 +11,8 @@ var dinnerOverviewHTMLView = function(model){
   var dishes = model.getAllDishes(type);
   var totalPrice = model.getTotalMenuPrice();
   var numberOfGuests = model.getNumberOfGuests();
+
+  //HTML-koden läggs in i body
 	$('body').append("<div>" +
 	    "<div class='col-sm-12' id='HommeleteGrey' style='background-color:lavender;'> " +   
 	      "<h1>Hommeleteblabla</h1>" +
@@ -47,17 +49,20 @@ var dinnerOverviewHTMLView = function(model){
 			index++;
 		}
 
+
+//Knappevent
 $("#dinnerOverviewToSelectDish").click(function() {
   
   mainView.page = "selectDish"
   mainView.refresh();})
 
+//Knappevent
 $("#dinnerOverviewToDinnerPreparation").click(function() {
   
   mainView.page = "dinnerPreparation"
   mainView.refresh();})
 
-
+//Event när man trycker på bild 
 $(".clickAbleDish").click(function(e) {
 
   var id = $(this).attr('id');
