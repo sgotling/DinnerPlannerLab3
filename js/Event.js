@@ -1,3 +1,5 @@
+//Detta är en klass som gör det möjligt att lägga till och notifiera observers
+
 var Event = function(){
 	this.observers = [];
 

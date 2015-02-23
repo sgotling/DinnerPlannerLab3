@@ -1,3 +1,4 @@
+//När deta objekt skapas visas fönstret för dish
 var dishHTMLView = function (model) {
   $("body").empty();
   var type = "main dish"
@@ -13,6 +14,8 @@ var dishHTMLView = function (model) {
   var totalPrice = model.getTotalMenuPrice();
   var numberOfGuests = model.getNumberOfGuests();
 
+
+//HTML-koden läggs in i body
 $('body').append("<div style='height: 100%'>" +
 "  <div class='col-sm-12' id='HommeleteGrey' style='background-color:lavender;'>" +    
  "     <h1>Hommeleteblabla</h1>" +
@@ -71,9 +74,6 @@ $('body').append("<div style='height: 100%'>" +
 "  </div>    " +
 "</div>");
 
-
-
-
   $('#dishHead').append(selectedDish.name);
   $('#dishImage').append("<img src='images/" + selectedDish.image + "' alt='Klematis' class='img-thumbnail' alt='Cinque Terre' width='304' height='236'>");
   $('#dishPreparation').append(selectedDish.description);
@@ -125,6 +125,8 @@ $('body').append("<div style='height: 100%'>" +
       $('#menuDishes').append('<tr><td>' + totalPrice + ' SEK' + '</td><td>Total</td></tr>');
         i++; 
 
+
+  //Knappevent
 
   $("#dishToSelectDish").click(function() {
   mainView.page = "selectDish"
