@@ -50,27 +50,7 @@ var dinnerOverviewHTMLView = function(model){
 		}
 
 
-//Knappevent
-$("#dinnerOverviewToSelectDish").click(function() {
-  
-  mainView.page = "selectDish"
-  mainView.refresh();})
 
-//Knappevent
-$("#dinnerOverviewToDinnerPreparation").click(function() {
-  
-  mainView.page = "dinnerPreparation"
-  mainView.refresh();})
-
-//Event när man trycker på bild 
-$(".clickAbleDish").click(function(e) {
-
-  var id = $(this).attr('id');
-  dish = model.getDish(id);
-  mainView.selectedDish = dish;
-  mainView.page = "dish";
-  mainView.refresh()
-  ;})
 
 
 

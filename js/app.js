@@ -3,8 +3,11 @@ $(function() {
 	//Här skapar vi model, views och controller
 	this.model = new DinnerModel();
 	mainView = new MainView(this.model);
+	var mainController = new MainController(this.model, mainView);
+	mainView.mainController = mainController;
 	mainView.page="start";
 	mainView.refresh();
+
 
 	//We instantiate our model
 	//And create the needed controllers and views

@@ -136,9 +136,7 @@ $('body').append("<div style='height: 100%'>" +
   mainView.page = "dinnerOverview"
   mainView.refresh();})
 
-  $("#confirmDish").click(function() {
-  mainView.page = "selectDish"
-  mainView.refresh();})
+  
 
 
 

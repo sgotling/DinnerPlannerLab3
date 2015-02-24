@@ -28,15 +28,7 @@ $('body').append("  <body background='http://i.huffpost.com/gen/1534838/thumbs/o
     "</div>" +
   "</body>");
 
-//Knappevent
-$("#startToSelectDish").click(function() {
-  
-  mainView.page = "selectDish"
-  mainView.refresh();})
-
-
 }
-
 
 
 

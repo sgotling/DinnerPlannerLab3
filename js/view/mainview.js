@@ -15,6 +15,7 @@ var numberOfGuests = model.getNumberOfGuests();
 this.selectedDish = menu[0];
  this.page="";
 
+this.mainController;
 
 var _this = this;
 
@@ -37,24 +38,28 @@ this.refresh = function () {
 	    case "dinnerPreparation":
 	        
 			var dinnerPreparationView = new dinnerPreparationHTMLView(model);
-
+			this.mainController.dinnerPreparationViewController();
 	        break;
 	    case "dinnerOverview":
 	        
 			var dinnerOverviewView = new dinnerOverviewHTMLView(model);
+			this.mainController.dinnerOverviewViewController();
 
 	        break;
 	    case "dish":
 	        $("body").empty();
 			var dishView = new dishHTMLView(model);
+			this.mainController.dishViewController();
 	        break;
 	    case "selectDish":
 	        $("body").empty();
 			var selectDishView = new selectDishHTMLView(model);
+			this.mainController.selectDishViewController();
 	        break;
 	    case "start":
 	        $("body").empty();
 			var startView = new startHTMLView(model);
+			this.mainController.startViewController();
 	        break;
 	}
 }

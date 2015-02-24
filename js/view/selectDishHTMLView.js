@@ -119,26 +119,4 @@ $('body').append("<div style='height: 100%'>" +
   }
 
 
-
-//Knappevent
-$("#selectDishToDinnerOverview").click(function() {
-  mainView.page = "dinnerOverview";
-  mainView.refresh();})
-
-
-$("#selectDishToDinnerOverview").click(function() {
-  mainView.page = "dinnerOverview";
-  mainView.refresh();})
-
-
-$(".clickAbleDish").click(function(e) {
-
-  var id = $(this).attr('id');
-  dish = model.getDish(id);
-  mainView.selectedDish = dish;
-  mainView.page = "dish";
-  mainView.refresh()
-  ;})
-
-
 }

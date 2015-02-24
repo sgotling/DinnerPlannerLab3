@@ -57,11 +57,7 @@ var dinnerPreparationHTMLView = function(model){
   }
 
 
-  //Knappevent
-  $("#dinnerPreparationToSelectDish").click(function() {
-  
-  mainView.page = "selectDish"
-  mainView.refresh();})
+
 
 
 }
