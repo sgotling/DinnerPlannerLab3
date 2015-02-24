@@ -2,14 +2,9 @@
 
 var dinnerPreparationHTMLView = function(model){
   $("body").empty();
-  var type = "main dish"
 
   var model = model;
   var menu = model.getFullMenu();
-
-  var selectedDish = menu[2];
-
-  var dishes = model.getAllDishes(type);
   var totalPrice = model.getTotalMenuPrice();
   var numberOfGuests = model.getNumberOfGuests();
 

@@ -2,22 +2,20 @@
 var MainView = function (model) {
 
 
-var type = "starter"
-//var model = new DinnerModel;
+
+//Detta ska tas bort senare
 model.addDishToMenu(1);
 model.addDishToMenu(100); 
 model.addDishToMenu(200);
+
+
+var type = "starter"
 var menu = model.getFullMenu();
-var dishes = model.getAllDishes(type);
-var totalPrice = model.getTotalMenuPrice();
-var numberOfGuests = model.getNumberOfGuests();
-
+var _this = this;
 this.selectedDish = menu[0];
- this.page="";
-
+this.page="";
 this.mainController;
 
-var _this = this;
 
 
 
