@@ -52,6 +52,7 @@ var DinnerModel = function() {
 	//Returns all the dishes on the menu.
 	this.getFullMenu = function() {
 		//TODO Lab 2
+		console.log("menu in dinnermodel " + menu + " heherherh");
 	    return menu;
 	}
 
@@ -98,23 +99,31 @@ var DinnerModel = function() {
 	this.addDishToMenu = function(id) {
 		//TODO Lab 2
 	    var dish;
-	    var index;
+	    var index = 0;
 	    dish = this.getDish(id);
 	    var type = dish.type;
-
-	    if(type == "starter"){
+while(index < menu.length){
+	if(type === menu[index].type) {
+		menu.splice(index,1);
+		
+	}
+	index = index + 1;
+}
+	    /*if(type == "starter"){
 		index = 0;
 	    }
 	    if(type == "main dish"){
 		index = 1;
 	    }
 	    if(type == "dessert"){
-		index = 2;
-	    }
-
-	    menu[index] = dish;
+		index = 2; 
+	    }*/
+	    
+		//console.log(dish);
+	    //menu[index] = dish;
+	    //console.log(menu[index]);
 	    //Ta bort sen när adddishtomenu är fixad. Använd ovan!!!!!
-	    //menu.push(dish);
+	    menu.push(dish);
 	    //this.menuChanged.notifyObservers();
 
 	}

@@ -4,17 +4,17 @@ var MainView = function (model) {
 
 
 //Detta ska tas bort senare
-model.addDishToMenu(1);
-model.addDishToMenu(100); 
-model.addDishToMenu(200);
 
 
-var type = "starter"
+
+
+this.selectedType = "starter";
 var menu = model.getFullMenu();
 var _this = this;
 this.selectedDish = menu[0];
 this.page="";
 this.mainController;
+this.dishes = model.getAllDishes(this.selectedType);
 
 
 

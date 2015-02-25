@@ -4,6 +4,7 @@ $(function() {
 	this.model = new DinnerModel();
 	mainView = new MainView(this.model);
 	var mainController = new MainController(this.model, mainView);
+	//var dishViewController = new DishViewController(this.model, mainView);
 	mainView.mainController = mainController;
 	mainView.page="start";
 	mainView.refresh();

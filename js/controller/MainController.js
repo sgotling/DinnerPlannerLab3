@@ -3,19 +3,28 @@ var MainController = function (model, mainView) {
 	this.startViewController = function () {
 		//Knappevent
 		$("#startToSelectDish").click(function() {
+
+
   			mainView.page = "selectDish"
   			mainView.refresh();})
-
 
 	}
 
 	this.selectDishViewController = function () {
 		//Knappevent
-		$("#selectDishToDinnerOverview").click(function() {
-		  mainView.page = "dinnerOverview";
-		  mainView.refresh();})
-
-
+		$("#Guests").on('keyup', function(evt){
+			if(evt.keyCode == 13) {
+			model.setNumberOfGuests($("#Guests").val());
+			mainView.refresh();
+			}
+			
+		});
+		
+		$("#selectType").change(function(){
+			mainView.selectedType = $("#selectType").val();
+			mainView.refresh();
+		});
+		
 		$("#selectDishToDinnerOverview").click(function() {
 		  mainView.page = "dinnerOverview";
 		  mainView.refresh();})
@@ -24,6 +33,7 @@ var MainController = function (model, mainView) {
 		$(".clickAbleDish").click(function(e) {
 
 		  var id = $(this).attr('id');
+		  
 		  dish = model.getDish(id);
 		  mainView.selectedDish = dish;
 		  mainView.page = "dish";
@@ -46,8 +56,7 @@ var MainController = function (model, mainView) {
 
 		//Event när man trycker på bild 
 		$(".clickAbleDish").click(function(e) {
-
-		  var id = $(this).attr('id');
+		  
 		  dish = model.getDish(id);
 		  mainView.selectedDish = dish;
 		  mainView.page = "dish";
@@ -64,8 +73,12 @@ var MainController = function (model, mainView) {
 			}
 
 
-	this.dishViewController = function () {
+	this.dishViewController = function(e) {
 		$("#confirmDish").click(function() {
+			var id = mainView.selectedDish.id;
+			//var dish = model.getDish(id);
+			//console.log(dish);			
+			model.addDishToMenu(id);
 			mainView.page = "selectDish"
 			mainView.refresh();})
 	}
