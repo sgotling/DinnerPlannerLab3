@@ -1,4 +1,5 @@
 //Används verkligen denna?
+// NEJ... det var min försök att separera kontrollers men sedan struntade jag i det... 
 
 var DishViewController = function(model, mainView){
   

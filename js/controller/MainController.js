@@ -13,14 +13,14 @@ var MainController = function (model, mainView) {
 	this.selectDishViewController = function () {
 		//Knappevent
 
-		$("#Guests").on('keyup', function(evt){
+		/* $("#Guests").on('keyup', function(evt){
 			if(evt.keyCode == 13) {
 			model.setNumberOfGuests($("#Guests").val());
 			
 			mainView.refresh();
 			}
 			
-		});
+		}); */  //BEHÖVS INTE KANSKE
 
 		$("#Guests").change(function(){
 			model.setNumberOfGuests($("#Guests").val());
@@ -91,5 +91,14 @@ var MainController = function (model, mainView) {
 			model.addDishToMenu(id);
 			mainView.page = "selectDish"
 			mainView.refresh();})
+			
+		$("#removeDish").click(function() {
+			var id = mainView.selectedDish.id;
+			//var dish = model.getDish(id);
+			//console.log(dish);			
+			model.removeDishFromMenu(id);
+			mainView.page = "selectDish"
+			mainView.refresh();})
+	
 	}
 }
