@@ -1,3 +1,5 @@
+//Används verkligen denna?
+
 var DishViewController = function(model, mainView){
   
   	this.ConfirmDishController = function(e) {

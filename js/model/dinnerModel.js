@@ -52,7 +52,6 @@ var DinnerModel = function() {
 	//Returns all the dishes on the menu.
 	this.getFullMenu = function() {
 		//TODO Lab 2
-		console.log("menu in dinnermodel " + menu + " heherherh");
 	    return menu;
 	}
 

@@ -31,9 +31,7 @@ var dinnerPreparationHTMLView = function(model){
     $('#preparationList').append("<div class='col-sm-12' id='Dish1'>" +
         "<div class='col-sm-6' id='pictAndDescrip'>" +
           "<div class='col-sm-6' style='padding:10pt' id='pict'>" +
-            "<a href='dish.html'>" +
               "<img src='images/" + menu[i].image +"' width='110' height='90'>" +
-            "</a>" +
           "</div>" +
           "<div class='col-sm-6' id='descrip'>" +
             "<p>" +

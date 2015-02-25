@@ -2,10 +2,8 @@
 var selectDishHTMLView = function (model) {
   $("body").empty();
   var type = mainView.selectedType;
-
   var model = model;
   var menu = model.getFullMenu();
-	console.log("menu in selectdishview " + menu + " heherherh");
   //var selectedDish = menu[2];
 
   var dishes = mainView.dishes;
@@ -14,15 +12,7 @@ var selectDishHTMLView = function (model) {
   
   
   
-  
-  		$("#Search").on('keyup', function(evt){
-			if(evt.keyCode == 13) {
-			dishes = model.getAllDishes(mainView.selectedType, $("#Search").val());
-			mainView.dishes = dishes;
-			mainView.refresh();
-			}
-			
-		});
+
 
   //HTML-koden läggs in i body
 $('body').append("<div style='height: 100%'>" +
@@ -35,7 +25,7 @@ $('body').append("<div style='height: 100%'>" +
       "My Dinner" +
       "</h1>" +
       "<div style>" +
-      	"<input id = 'Guests'>" +
+        "<input type='number' size='10' id='Guests' name='mynumber' value='" + numberOfGuests + "' min='1' />" +
         "<label for='sel1'>Specify number of guests</label>" +
       "</div>" +           
         "<table class='table'>" +
@@ -60,7 +50,7 @@ $('body').append("<div style='height: 100%'>" +
     				"<div class='input-group'>" +
       				  "<input id='Search' type='text' class='form-control' placeholder='Search for...'>" +
       				  "<span class='input-group-btn'>" +
-        			    "<button class='btn btn-default' type='button'>Go!</button>" +
+        			    "<button id='searchButton' class='btn btn-default' type='button'>Go!</button>" +
       				  "</span>" +
                     "</div><!-- /input-group -->" +
                  "</div><!-- /.col-lg-6 -->" +
@@ -80,6 +70,19 @@ $('body').append("<div style='height: 100%'>" +
 "</div>");
 
 
+  
+      $("#Search").on('keyup', function(evt){
+      if(evt.keyCode == 13) {
+      dishes = model.getAllDishes(mainView.selectedType, $("#Search").val());
+      mainView.dishes = dishes;
+      mainView.refresh();
+      }
+    });
+      $("#searchButton").click(function(){
+        dishes = model.getAllDishes(mainView.selectedType, $("#Search").val());
+        mainView.dishes = dishes;
+        mainView.refresh();
+      });
 
 
   var i = 0;
