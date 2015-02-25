@@ -15,20 +15,19 @@ var dinnerPreparationHTMLView = function(model){
         "- From best chefs in the world directly to your kitchen" +
       "</div>" +
       "<div class='col-sm-12' id='selectdish'>" +
-        "<div class='col-sm-6'>" +
-          "<h1>My Dinner: x people</h1>" +
-        "</div>" +
-        "<div class='col-sm-6'>" +
+        "<div class='col-sm-12'>" +
+          "<h1>My Dinner: " + numberOfGuests + " people</h1>" +
             "<button id='dinnerPreparationToSelectDish' type='button' style='float:right; padding:10pt; background:orange'>Go back and edit dinner</button>" +
         "</div>" +
       "</div>" +
-      "<div id='preparationList' ></div>" +
-    "</div>");
+      "</div>" +
+        "<div id='preparationList' ></div>" +
+      "</div>");
   var i = 0;
 
   while(i < menu.length){
     //console.log(selectedDish.ingredients[i].name);
-    $('#preparationList').append("<div class='col-sm-12' id='Dish1'>" +
+    $('#preparationList').append("<div class='col-sm-12 dishPreparation'>" +
         "<div class='col-sm-6' id='pictAndDescrip'>" +
           "<div class='col-sm-6' style='padding:10pt' id='pict'>" +
               "<img src='images/" + menu[i].image +"' width='110' height='90'>" +

@@ -20,7 +20,7 @@ $('body').append("<div style='height: 100%'>" +
 "      My Dinner" +
 "      </h1>" +
  "     <div style>" +
-  "      <input> <!-- Probably to be fixed -->" +
+  "     <input type='number' size='10' id='Guests' name='mynumber' value='" + numberOfGuests + "' min='1' />" +
    "     <label for='sel1'>Specify number of guests</label>" +
    "   </div>        " +   
   "      <table class='table'>" +
@@ -36,12 +36,20 @@ $('body').append("<div style='height: 100%'>" +
 "        <button id='dishToDinnerOverview' type='button' style=' background:orange'>Confirm dinner</button>" +
 "    </div> " +
 "  <div class='col-sm-8' id='Dish'>" +
-"    <div class='col-sm-6'>" +
+"    <div id='dishInformaiton' class='col-sm-6'>" +
 "      <h1 id='dishHead'></h1>" +
 "      <div width='100%' color='#000000;' id='dishImage'>" +
 "      </div>" +
-"    </div>" +
-"    <div class='col-sm-6' id='ing'>" +
+"    <div class='col-sm-6' id='theDish'> " +
+"     <p>" +
+"     <h4>PREPARATION</h4>" +
+"     </p>" +
+"     <p id='dishPreparation'>" +
+"     </p>" +
+"    </div><!-- / .dishInformaiton-->" +
+
+"    </div> <!-- /.theDish -->   " + 
+"    <div class='col-sm-4' id='ingredientsDiv'>" +
 "      <table class='table' id='ingTable'>" +
 "            <thead>" +
 "              <tr>" +
@@ -53,20 +61,12 @@ $('body').append("<div style='height: 100%'>" +
 "            <tbody id='tableElement'>" +
 "            </tbody>" +
 "          </table>" +
-"    </div>" +
-"    <div class='col-sm-6' id='theDish'> " +     
-"    </div> <!-- /.theDish -->   " +  
-"  </div>" +
-"  <div class='col-sm-8' style='padding:10pt'>" +
-"    <div class='col-sm-12' style='padding:10px'>" +
+"    </div>" + 
+"    <div class='col-sm-4' style='padding:10px'>" +
 "        <button id='dishToSelectDish' type='button' style=' background:orange'>Go back and edit dinner</button>" +
 "    </div> " +
-"    <p>" +
-"    <h4>PREPARATION</h4>" +
-"    </p>" +
-"    <p id='dishPreparation'>" +
-"    </p>" +
-"  </div>    " +
+"  </div>" +
+
 "</div>");
 
   $('#dishHead').append(selectedDish.name);

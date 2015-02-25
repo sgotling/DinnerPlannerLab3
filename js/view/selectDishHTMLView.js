@@ -41,7 +41,9 @@ $('body').append("<div style='height: 100%'>" +
         "</table>" +
         "<button id='selectDishToDinnerOverview' type='button' style=' background:orange'>Confirm dinner</button>" +
     "</div>" +
-    "<div class='col-sm-8' >" +
+    "<div class='col-sm-2' >" +
+    "</div>" +
+    "<div class='col-sm-6' >" +
       "<div class='col-sm-12' id='selectdish'>" +
         "<h1>SELECT DISH</h1>" +
 			"<hr width='100%' style='color:#000000'>" +
@@ -68,6 +70,10 @@ $('body').append("<div style='height: 100%'>" +
       "</div> <!-- /.selectPICTdish -->" +
     "</div>" +
 "</div>");
+
+
+$("body").css("background-image", "url(http://uq.edu.au/sustainability/images/custom/sustainablefood/VegetableBasket.jpg)");  
+
 
 
   

@@ -23,9 +23,11 @@ var dinnerOverviewHTMLView = function(model){
 	          "<button id='dinnerOverviewToSelectDish' type='button' style='float:right; padding:10pt; background:orange'>Go back and edit dinner</button>" +
 	      "</div>" +
 	    "</div>" +
-	    "<div class='col-sm-12 col-centered' id='dishOverview'>" +
-	        "<div style='padding:10pt' id='overviewPict'>" +
-	        "</div>" +
+	    "<div class='col-sm-12' id='dishOverviewPicturesDiv'>" +
+	    	"<div class='col-sm-12 col-centered' id='dishOverview'>" +
+	        	"<div style='padding:10pt' id='overviewPict'>" +
+	        	"</div>" +
+	    	"</div>" +
 	    "</div>" +
 	    "<div class='col-sm-12'>" +
 	        "<button id='dinnerOverviewToDinnerPreparation' type='button' style='padding:10pt; background:orange'>Print Full Recipe</button>" +

@@ -1,7 +1,7 @@
 //När deta objekt skapas visas startsidan
 var startHTMLView = function (model) {
   $("body").empty();
-$('body').append("  <body background='http://i.huffpost.com/gen/1534838/thumbs/o-FAMILY-DINNER-facebook.jpg'>" +
+$('body').append(
     "<div id='Hommelete'>" +
      "<h1>Hommelette</h1>" +
      "- From best chefs in the world directly to your kitchen" +
@@ -15,9 +15,10 @@ $('body').append("  <body background='http://i.huffpost.com/gen/1534838/thumbs/o
       "<p>" +
         "<button id='startToSelectDish' type='button' class='btn btn-warning' style='padding:10pt;'>Create a new dinner</button>" +
       "</p>" +
-    "</div>" +
-  "</body>");
+    "</div>");
 
+
+  $("body").css("background-image", "url(http://i.huffpost.com/gen/1534838/thumbs/o-FAMILY-DINNER-facebook.jpg)");  
 }
 
 

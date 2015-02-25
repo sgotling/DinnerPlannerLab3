@@ -4,8 +4,12 @@ html{
 
 body{
 	height:100%;
+    background-size: 100%;
 }
 
+img{
+    opacity: none;
+}
 .container-fluid{
 	height: 100%;
 }
@@ -47,7 +51,8 @@ body{
 	background: #FFFFFF;
 	opacity: 0.8;
 	border: 2px solid;
-	height:100%;
+    padding: 40px;
+	/*height:100%;*/
 }
 
 
@@ -58,6 +63,7 @@ body{
 
 #selectdish {
 	background: #FFCC66;
+    opacity: 0.94;
 	border: 2px solid;
 	padding: 2%;	
 }
@@ -66,23 +72,38 @@ body{
 	width:370px;
 	float: none;
 }
+
+#imageSearchResult{
+
+}
+
 #selectPICTdish {
-	border: 2px solid
+	border: 2px solid;
+    opacity: 0.9;
 }
 #theDish {
 	background: #FFFFFF;
-	opacity: 0.8;
+	opacity: 0.9;
 	height:100%;
 	width:400px;	
     height:100%;
 }
 #ingredients {
 	background: #FFFFFF;
-	opacity: 0.8;
+	opacity: 0.9;
 	height:100%;
 	width:400px;	
     height:100%;
-    border: 2px solid
+    border: 2px solid;
+}
+
+#ingredientsDiv{
+    opacity: 0.9;
+}
+
+#Dish{
+    background: white;
+    opacity:0.9;
 }
 
 #line{
@@ -96,6 +117,24 @@ body{
     background:#FFCC66;
 }
 
+#dishOverviewPicturesDiv{
+    background: white;
+    opacity: 0.9;
+
+}
+
+#overviewPict{
+    float: center;
+}
+
+#preparationList{
+    background: white;
+}
+
+.dishPreparation{
+    background: white;
+    opacity: 0.9
+}
 
 div.img {
     margin: 5px;
