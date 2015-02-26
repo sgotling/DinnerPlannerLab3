@@ -28,6 +28,7 @@ $('body').append("<div style='height: 100%'>" +
               "<th>Type</th>" +
               "<th>Dishes</th>" +
               "<th>Cost</th>" +
+              "<th>Remove dish</th>" +
  "           </tr>" +
  "         </thead>" +
  "         <tbody id='menuDishes'>" +
@@ -113,11 +114,13 @@ $('body').append("<div style='height: 100%'>" +
         price = price + menu[i].ingredients[j].price;
         j++;
       }
-      $('#menuDishes').append('<tr><td>' + menu[i].type + '</td><td>' + menu[i].name + '</td><td>' + price * numberOfGuests + ' SEK' + '</td></tr>');
+      $('#menuDishes').append('<tr><td>' + menu[i].type + '</td><td>' 
+      + menu[i].name + '</td><td>' + price * numberOfGuests + ' SEK' 
+      + '</td><td><button id="removeDish" type="button" class="btn btn-danger">X</button></td></tr>');
       i++;
       
     }
-    $('#menuDishes').append('<tr><td>' + ' ' + '</td><td>Total</td><td>' + totalPrice + ' SEK' + '</td></tr>'); 
+    $('#menuDishes').append('<tr><td>' + ' ' + '</td><td>Total</td><td>' + totalPrice + ' SEK' + '</td></tr>');
 
 
   //Knappevent

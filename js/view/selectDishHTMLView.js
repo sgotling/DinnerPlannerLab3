@@ -34,6 +34,7 @@ $('body').append("<div style='height: 100%'>" +
               "<th>Type</th>" +
               "<th>Dishes</th>" +
               "<th>Cost</th>" +
+              "<th>Remove dish</th>" +
             "</tr>" +
           "</thead>" +
           "<tbody id='menuDishes'>" +
@@ -77,13 +78,14 @@ $("body").css("background-image", "url(http://uq.edu.au/sustainability/images/cu
 
 
   
-      $("#Search").on('keyup', function(evt){
+      /*$("#Search").on('keyup', function(evt){
       if(evt.keyCode == 13) {
       dishes = model.getAllDishes(mainView.selectedType, $("#Search").val());
       mainView.dishes = dishes;
       mainView.refresh();
       }
-    });
+    });*/  // DEN KODEN KÖRS INTE (som det är i gesternas fall) (det räcker med den efterföljande) 
+       
       $("#searchButton").click(function(){
         dishes = model.getAllDishes(mainView.selectedType, $("#Search").val());
         mainView.dishes = dishes;
@@ -92,6 +94,7 @@ $("body").css("background-image", "url(http://uq.edu.au/sustainability/images/cu
 
 
   var i = 0;
+
     while(i < menu.length){
       var price=0;
       var j = 0;
@@ -99,9 +102,17 @@ $("body").css("background-image", "url(http://uq.edu.au/sustainability/images/cu
         price = price + menu[i].ingredients[j].price;
         j++;
       }
-      $('#menuDishes').append('<tr><td>' + menu[i].type + '</td><td>' + menu[i].name + '</td><td>' + price * numberOfGuests + ' SEK' + '</td></tr>');
+      $('#menuDishes').append('<tr><td>' + menu[i].type + '</td><td>' 
+      + menu[i].name + '</td><td>' + price * numberOfGuests + ' SEK' 
+      + '</td><td><button id="removeDish" type="button" class="btn btn-danger">X</button></td></tr>');
       i++;
-      
+    while(i > menu.length){
+      var price=0;
+      }
+      $('#menuDishes').remove('<tr><td>' + menu[i].type + '</td><td>' 
+      + menu[i].name + '</td><td>' + price * numberOfGuests + ' SEK' 
+      + '</td><td><button id="removeDish" type="button" class="btn btn-danger">X</button></td></tr>');
+      i--;
     }
     $('#menuDishes').append('<tr><td>' + ' ' + '</td><td>Total</td><td>' + totalPrice + ' SEK' + '</td></tr>');
       

@@ -133,7 +133,7 @@ while(index < menu.length){
 	    var index = 0;
 
 	     for(dish in menu){
-			if(dish.id == id) {
+			if(dish.id === id) {
 			    delete menu[index];
 			}
 		 else{
