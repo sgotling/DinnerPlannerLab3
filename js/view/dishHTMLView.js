@@ -41,15 +41,10 @@ $('body').append("<div style='height: 100%'>" +
 "      <h1 id='dishHead'></h1>" +
 "      <div width='100%' color='#000000;' id='dishImage'>" +
 "      </div>" +
-"    <div class='col-sm-6' id='theDish'> " +
-"     <p>" +
-"     <h4>PREPARATION</h4>" +
-"     </p>" +
-"     <p id='dishPreparation'>" +
-"     </p>" +
-"    </div><!-- / .dishInformaiton-->" +
 
-"    </div> <!-- /.theDish -->   " + 
+"     <h4>PREPARATION</h4>" +
+
+"    </div><!-- / .dishInformaiton-->" +
 "    <div class='col-sm-4' id='ingredientsDiv'>" +
 "      <table class='table' id='ingTable'>" +
 "            <thead>" +
@@ -66,13 +61,16 @@ $('body').append("<div style='height: 100%'>" +
 "    <div class='col-sm-4' style='padding:10px'>" +
 "        <button id='dishToSelectDish' type='button' style=' background:orange'>Go back and edit dinner</button>" +
 "    </div> " +
+
+"    </div> <!-- /.theDish -->   " + 
+
 "  </div>" +
 
 "</div>");
 
   $('#dishHead').append(selectedDish.name);
   $('#dishImage').append("<img src='images/" + selectedDish.image + "' alt='Klematis' class='img-thumbnail' alt='Cinque Terre' width='304' height='236'>");
-  $('#dishPreparation').append(selectedDish.description);
+  $('#dishInformaiton').append(selectedDish.description);
 
   var i = 0;
   while(i < selectedDish.ingredients.length){

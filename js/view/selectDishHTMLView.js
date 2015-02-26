@@ -44,7 +44,7 @@ $('body').append("<div style='height: 100%'>" +
     "</div>" +
     "<div class='col-sm-2' >" +
     "</div>" +
-    "<div class='col-sm-6' >" +
+    "<div id='selectTheDishesDiv' class='col-sm-6' >" +
       "<div class='col-sm-12' id='selectdish'>" +
         "<h1>SELECT DISH</h1>" +
 			"<hr width='100%' style='color:#000000'>" +
@@ -93,7 +93,7 @@ $("body").css("background-image", "url(http://uq.edu.au/sustainability/images/cu
       });
 
 
-  var i = 0;
+    var i = 0;
 
     while(i < menu.length){
       var price=0;
@@ -104,15 +104,23 @@ $("body").css("background-image", "url(http://uq.edu.au/sustainability/images/cu
       }
       $('#menuDishes').append('<tr><td>' + menu[i].type + '</td><td>' 
       + menu[i].name + '</td><td>' + price * numberOfGuests + ' SEK' 
-      + '</td><td><button id="removeDish" type="button" class="btn btn-danger">X</button></td></tr>');
+      + '</td><td><button id="' + menu[i].id + '" type="button" class="btn btn-danger removeDish">X</button></td></tr>');
       i++;
     while(i > menu.length){
       var price=0;
       }
+
+      $(".removeDish").click(function () {
+        id = parseInt(this.id);
+        model.removeDishFromMenu(id);
+      });
+
+
+      /*
       $('#menuDishes').remove('<tr><td>' + menu[i].type + '</td><td>' 
       + menu[i].name + '</td><td>' + price * numberOfGuests + ' SEK' 
       + '</td><td><button id="removeDish" type="button" class="btn btn-danger">X</button></td></tr>');
-      i--;
+      i--;*/
     }
     $('#menuDishes').append('<tr><td>' + ' ' + '</td><td>Total</td><td>' + totalPrice + ' SEK' + '</td></tr>');
       

@@ -131,16 +131,19 @@ while(index < menu.length){
 	this.removeDishFromMenu = function(id) {
 		//TODO Lab 2
 	    var index = 0;
+	    console.log("id from input", id)
 
 	     for(dish in menu){
-			if(dish.id === id) {
-			    delete menu[index];
+
+			if(menu[dish].id === id) {
+			    menu.splice(index,1);
 			}
 		 else{
 		     index += 1;
 		     } 
 		}
-		menuChanged.notifyObservers();
+		console.log("menu in model", menu)
+		this.menuChanged.notifyObservers();
 	}
 
 	//function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")
