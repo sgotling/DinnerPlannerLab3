@@ -55,7 +55,7 @@ this.refresh = function () {
 			this.mainController.selectDishViewController();
 	        break;
 	    case "start":
-	        $("body").empty();
+
 			var startView = new startHTMLView(model);
 			this.mainController.startViewController();
 	        break;
