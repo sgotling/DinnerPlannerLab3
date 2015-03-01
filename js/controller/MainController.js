@@ -40,7 +40,7 @@ var MainController = function (model, mainView) {
 		  mainView.refresh();})
 
 
-		$(".clickAbleDish").click(function(e) {
+		$(".clickAbleDish").click(function() {
 
 		  var id = $(this).attr('id');
 		  

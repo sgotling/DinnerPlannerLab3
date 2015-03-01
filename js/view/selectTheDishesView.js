@@ -1,4 +1,4 @@
-var SelectTheDishesView = function (selectTheDishesViewController, model) {
+var SelectTheDishesView = function (model) {
 	var _this = this;
 
 	this.show = function () {

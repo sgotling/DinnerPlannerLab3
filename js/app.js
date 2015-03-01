@@ -9,9 +9,18 @@ $(function() {
 	this.myDinnerTableView = new MyDinnerTableView(this.myDinnerTableViewController, this.model);
 	
 	
-	this.selectTheDishesView = new SelectTheDishesView(this.selectTheDishesViewController, this.model);
+
+
+
+
+
+
+	this.selectTheDishesView = new SelectTheDishesView(this.model);
 	this.selectTheDishesViewController = new SelectTheDishesViewController(this.selectTheDishesView);
-	
+
+	this.selectedDishInformationView = new SelectedDishInformationView();
+	this.selectedDishInformationViewController = new SelectedDishInformationViewController(this.selectedDishInformationView, this.model);
+
 
 	//var dishViewController = new DishViewController(this.model, mainView);
 

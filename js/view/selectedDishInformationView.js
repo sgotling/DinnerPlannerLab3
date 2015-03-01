@@ -1,0 +1,3 @@
+var SelectedDishInformationView= function (model) {
+
+}
