@@ -2,12 +2,25 @@ $(function() {
 	
 	//Här skapar vi model, view och controller
 	this.model = new DinnerModel();
-	mainView = new MainView(this.model);
-	var mainController = new MainController(this.model, mainView);
+	this.startPageTextboxViewController = new StartPageTextboxViewController();
+	this.startPageTextboxView = new StartPageTextboxView(this.startPageTextboxViewController);
+
+	this.myDinnerTableViewController = new MyDinnerTableViewController();
+	this.myDinnerTableView = new MyDinnerTableView(this.myDinnerTableViewController, this.model);
+	
+	
+	this.selectTheDishesView = new SelectTheDishesView(this.selectTheDishesViewController, this.model);
+	this.selectTheDishesViewController = new SelectTheDishesViewController(this.selectTheDishesView);
+	
+
 	//var dishViewController = new DishViewController(this.model, mainView);
-	mainView.mainController = mainController;
-	mainView.page="start";
-	mainView.refresh();
+
+
+	// mainView = new MainView(this.model);
+	// var mainController = new MainController(this.model, mainView);
+	// mainView.mainController = mainController;
+	// mainView.page="start";
+	// mainView.refresh();
 
 
 	//We instantiate our model

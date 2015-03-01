@@ -7,10 +7,14 @@ body{
     background-size: 100%;
 }
 
+/*button{
+    background:orange;
+}*/
 
 .container-fluid{
 	height: 100%;
 }
+
 #Hommelette {
     font-family: "Times New Roman";
     font-size: 20px;
@@ -23,35 +27,86 @@ body{
    float: none;
 }
 
-
-#HommeleteGrey {
-    font-family: "Times New Roman";
-    font-size: 20px;
-    background: #F0F0F0 ;
-    padding: 10pt;
-    border: 2px solid;
-    opacity: 0.8;
-   /* NOTE: Only works for non-floated block elements */
-   display: block;
-   float: none;
-}
-
-
-
-#Textbox {
-	padding: 30pt;
-	width:500px;
-	background: #FFFFFF;
-	background: rgba(255, 255, 255, 0.8);
-		}
-		
-#MyDinner {
-	background: #FFFFFF;
+#startPageTextbox {
+    display:none;
+    padding: 30pt;
+    width:500px;
+    background: #FFFFFF;
     background: rgba(255, 255, 255, 0.8);
-	border: 2px solid;
+        }
+        
+#myDinnerTable {
+    display:none;
+    background: #FFFFFF;
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid;
     padding: 40px;
-	/*height:100%;*/
+    /*height:100%;*/
 }
+
+#startToSelectDishButton{
+    padding: 10pt;
+}
+
+
+
+#selectTheDishesDiv{
+    float: right;
+    display: none;
+}
+
+#selectPICTdish {
+    border: 2px solid;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10pt; 
+}
+
+div.img {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #0000ff;
+    height: auto;
+    width: auto;
+    float: left;
+    text-align: center;
+}
+
+div.img img {
+    display: inline;
+    margin: 5px;
+    border: 1px solid #ffffff;
+}
+
+div.img a:hover img {
+    border: 1px solid #0000ff;
+}
+
+div.desc {
+    text-align: center;
+    font-weight: normal;
+    width: 120px;
+    margin: 5px;
+}
+
+#selectedDishInformation {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #dishname {
@@ -59,9 +114,7 @@ body{
 	background: #F0F0F0 ;
 }
 
-#selectTheDishesDiv{
-    opacity: 0.8;
-}
+
 
 #selectdish {
 	background: #FFCC66;
@@ -79,10 +132,7 @@ body{
 
 }
 
-#selectPICTdish {
-	border: 2px solid;
-    background: rgba(255, 255, 255, 0.8);
-}
+
 
 #ingredients {
 	background: #FFFFFF;
@@ -136,30 +186,4 @@ body{
     background: rgba(255, 255, 255, 0.8);
 }
 
-div.img {
-    margin: 5px;
-    padding: 5px;
-    border: 1px solid #0000ff;
-    height: auto;
-    width: auto;
-    float: left;
-    text-align: center;
-}
-
-div.img img {
-    display: inline;
-    margin: 5px;
-    border: 1px solid #ffffff;
-}
-
-div.img a:hover img {
-    border: 1px solid #0000ff;
-}
-
-div.desc {
-    text-align: center;
-    font-weight: normal;
-    width: 120px;
-    margin: 5px;
-}
 
