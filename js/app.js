@@ -2,36 +2,22 @@ $(function() {
 	
 	//Här skapar vi model, view och controller
 	this.model = new DinnerModel();
-	this.startPageTextboxViewController = new StartPageTextboxViewController();
-	this.startPageTextboxView = new StartPageTextboxView(this.startPageTextboxViewController);
-
-	this.myDinnerTableViewController = new MyDinnerTableViewController();
-	this.myDinnerTableView = new MyDinnerTableView(this.myDinnerTableViewController, this.model);
+	
+	this.startPageTextboxView = new StartPageTextboxView();
+	this.startPageTextboxViewController = new StartPageTextboxViewController(this.startPageTextboxView);
+	
+	this.myDinnerTableView = new MyDinnerTableView(this.model);
+	this.myDinnerTableViewController = new MyDinnerTableViewController(this.myDinnerTableView, this.model);
 	
 	
-
-
-
-
-
 
 	this.selectTheDishesView = new SelectTheDishesView(this.model);
-	this.selectTheDishesViewController = new SelectTheDishesViewController(this.selectTheDishesView);
+	this.selectTheDishesViewController = new SelectTheDishesViewController(this.selectTheDishesView, this.model);
 
-	this.selectedDishInformationView = new SelectedDishInformationView();
-	this.selectedDishInformationViewController = new SelectedDishInformationViewController(this.selectedDishInformationView, this.model);
-
-
-	//var dishViewController = new DishViewController(this.model, mainView);
-
-
-	// mainView = new MainView(this.model);
-	// var mainController = new MainController(this.model, mainView);
-	// mainView.mainController = mainController;
-	// mainView.page="start";
-	// mainView.refresh();
-
-
+	this.selectedDishInformationView = new SelectedDishInformationView(this.model);
+	this.selectedDishInformationViewController = new SelectedDishInformationViewController(this.selectedDishInformationView,this.model);
+	
+	
 	//We instantiate our model
 	//And create the needed controllers and views
 	//var exampleView = new ExampleView($("#exampleView"));

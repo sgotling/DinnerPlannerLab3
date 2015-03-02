@@ -11,23 +11,11 @@ var MainController = function (model, mainView) {
 	}
 
 	this.selectDishViewController = function () {
-		//Knappevent
-
-		/* $("#Guests").on('keyup', function(evt){
-			if(evt.keyCode == 13) {
-			model.setNumberOfGuests($("#Guests").val());
-			
-			mainView.refresh();
-			}
-			
-		}); */  //BEHÖVS INTE KANSKE
 
 		$("#Guests").change(function(){
 			model.setNumberOfGuests($("#Guests").val());
 			mainView.refresh();
 		});
-
-
 		
 		$("#selectType").change(function(){
 			mainView.selectedType = $("#selectType").val();
@@ -39,11 +27,8 @@ var MainController = function (model, mainView) {
 		  mainView.page = "dinnerOverview";
 		  mainView.refresh();})
 
-
 		$(".clickAbleDish").click(function() {
-
 		  var id = $(this).attr('id');
-		  
 		  dish = model.getDish(id);
 		  mainView.selectedDish = dish;
 		  mainView.page = "dish";

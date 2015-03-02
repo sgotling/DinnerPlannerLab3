@@ -41,21 +41,7 @@ $('body').append("<div style='height: 100%'>" +
 
 "</div>");
 
-  $('#dishHead').append(selectedDish.name);
-  $('#dishImage').append("<img src='images/" + selectedDish.image + "' alt='Klematis' class='img-thumbnail' alt='Cinque Terre' width='304' height='236'>");
-  $('#dishInformaiton').append(selectedDish.description);
-
-  var i = 0;
-  while(i < selectedDish.ingredients.length){
-    //console.log(selectedDish.ingredients[i].name);
-    $('#tableElement').append('<tr><td>' + selectedDish.ingredients[i].quantity + 
-     " " + selectedDish.ingredients[i].unit + '</td><td>' + selectedDish.ingredients[i].name + '</td>' +
-     '<td>' + selectedDish.ingredients[i].price + " SEK" + '</td></tr>');
-
-    i++;
-  }
-  $('#tableElement').append("<button id='confirmDish' type='button' style='background:orange'>Confirm dish" + 
-    "</button></a>");
+ 
 
 
 

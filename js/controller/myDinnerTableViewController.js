@@ -1,11 +1,20 @@
-var MyDinnerTableViewController = function (model) {
+var MyDinnerTableViewController = function (view, model) {
 	this.startToSelectDishButtonClicked = new Event();
 	this.selectDishToDinnerOverviewButtonClicked = new Event();
 	var _this = this;
+
+
 	$("#startToSelectDishButton").click(function () {
-		_this.startToSelectDishButtonClicked.notifyObservers()
+		view.show();
  	});
  	$("#selectDishToDinnerOverviewButton").click(function () {
- 		_this.selectDishToDinnerOverviewButtonClicked.notifyObservers();
+ 		view.hide();
  	})
-}
+
+ 	$("#Guests").change(function(){
+
+			model.setNumberOfGuests($("#Guests").val());
+
+		});
+ 	
+}// MyDinnerTableViewController end

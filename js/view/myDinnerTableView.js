@@ -1,31 +1,27 @@
- var MyDinnerTableView = function (myDinnerTableViewController, model) {
+ var MyDinnerTableView = function (model) {
  	var _this = this
- 	myDinnerTableViewController.startToSelectDishButtonClicked.addObserver(function () {
- 		_this.showMyDinnerTable()
- 	})
 
- 	myDinnerTableViewController.selectDishToDinnerOverviewButtonClicked.addObserver(function () {
- 		_this.hideMyDinnerTable()
+ 	model.menuChanged.addObserver(function () {
+	 	_this.myDinnerTableInformationUpdate();
  	})
-
- 	myDinnerTableViewController.startToSelectDishButtonClicked.addObserver(function () {
- 		_this.myDinnerTableInformationUpdate()
+ 	model.numberOfGuestsChanged.addObserver(function () {
+	 	_this.myDinnerTableInformationUpdate();
  	})
+ 	
 
- 	this.showMyDinnerTable = function () {
+ 	this.show = function () {
  		$("#myDinnerTable").show();
  	}// showMyDinnerTable end
 
- 	this.hideMyDinnerTable = function () {
+ 	this.hide= function () {
  		$("#myDinnerTable").hide();
  	}// hideMyDinnerTable end
 
  	this.myDinnerTableInformationUpdate = function () {
-
+ 		$('#menuDishes').empty();
  		var menu = model.getFullMenu();
  		var numberOfGuests = model.getNumberOfGuests();
  		var totalPrice = model.getTotalMenuPrice();
-
 	 	var i = 0;
 	    while(i < menu.length){
 	      var price=0;
@@ -41,13 +37,15 @@
 	    while(i > menu.length){
 	      var price=0;
 	      }
+	    }
+    	$('#menuDishes').append('<tr><td>' + ' ' + '</td><td>Total</td><td>' + totalPrice + ' SEK' + '</td></tr>');
 
-	      $(".removeDish").click(function () {
+    	// Denna ska egentligen inte liggga här
+    	$(".removeDish").on('click',function () {
 	        id = parseInt(this.id);
 	        model.removeDishFromMenu(id);
 	      });
-	    }
-    	$('#menuDishes').append('<tr><td>' + ' ' + '</td><td>Total</td><td>' + totalPrice + ' SEK' + '</td></tr>');
+
  	}// myDinnerTableInformationUpdate end
  	
  }// MyDinnerTableView end

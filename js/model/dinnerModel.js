@@ -6,10 +6,17 @@ var DinnerModel = function() {
 	// and selected dinner options for dinner menu
     var numberOfGuests = 1;
     var menu = [];
+    this.selectedDish = 0;
     
     //Här är kommer refresh-metoden från mainView att lägas in.
     this.numberOfGuestsChanged = new Event();
     this.menuChanged = new Event();
+    this.selectedDishChanged = new Event();
+
+    this.setSelectedDish = function (dishId) {
+    	this.selectedDish = dishId;
+    	this.selectedDishChanged.notifyObservers();
+    }
 
 
 	this.setNumberOfGuests = function(num) {
@@ -123,7 +130,7 @@ while(index < menu.length){
 	    //console.log(menu[index]);
 	    //Ta bort sen när adddishtomenu är fixad. Använd ovan!!!!!
 	    menu.push(dish);
-	    //this.menuChanged.notifyObservers();
+	    this.menuChanged.notifyObservers();
 
 	}
 

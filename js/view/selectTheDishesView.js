@@ -1,6 +1,14 @@
 var SelectTheDishesView = function (model) {
 	var _this = this;
 
+	model.selectedDishChanged.addObserver(function () {
+		_this.hide();
+	})
+	model.menuChanged.addObserver(function () {
+	 	_this.show();
+ 	})
+	
+
 	this.show = function () {
  		$("#selectTheDishesDiv").show();
  	}// showMyDinnerTable end
@@ -23,5 +31,13 @@ var SelectTheDishesView = function (model) {
 			"</div>");
 			index++;
 		}
+		// denna ska egentligen inte ligga här men jag får den inte att funka annars.........
+		$(".clickAbleDish").on("click", function(evt){
+		model.setSelectedDish($(this).attr("id"));
+	});
+
  	}// updateImages
 }// SelectTheDishesView end
+
+
+// prototype används för att objekten ska återanvända samma funktion. Gör det även möjligt för override

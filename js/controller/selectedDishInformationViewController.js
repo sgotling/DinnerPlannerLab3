@@ -1,5 +1,22 @@
 var SelectedDishInformationViewController = function (view, model) {
-	$(".clickAbleDish").click(function () {
-		alert("hej");
-	})
+
+	
+
+	this.addToMenu = function () {
+		model.addDishToMenu(id);
+	}
+
+	$("#confirmDish").click(function () {
+		var selectedDishId = model.selectedDish;
+		model.addDishToMenu(selectedDishId);
+	});
+
+	$("#dishInformationToSelectDishButton").click(function () {
+		view.hide();
+		});
+
+	$("#selectDishToDinnerOverviewButton").click(function () {
+ 		view.hide();
+ 	})
+
 }

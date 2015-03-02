@@ -90,7 +90,10 @@ div.desc {
 
 #selectedDishInformation {
     display: none;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10pt;
 }
+
 
 
 
@@ -144,17 +147,13 @@ div.desc {
 }
 
 #ingredientsDiv{
-    background: rgba(255, 255, 255, 0.8);
+    /*background: rgba(255, 255, 255, 0.8);*/
 }
 
 #dishPreparation{
     background: rgba(255, 255, 255, 0.8);
 }
 
-#Dish{
-    background: rgba(255, 255, 255, 0.8);
-    
-}
 
 #line{
     background: #FFFFFF;
