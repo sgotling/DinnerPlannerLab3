@@ -94,7 +94,13 @@ div.desc {
     padding: 10pt;
 }
 
+#Overview {
+	display:none;
+}
 
+#DinnerPreparation {
+	display:none;
+}
 
 
 

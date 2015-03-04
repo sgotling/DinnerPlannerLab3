@@ -9,7 +9,16 @@ var MyDinnerTableViewController = function (view, model) {
  	});
  	$("#selectDishToDinnerOverviewButton").click(function () {
  		view.hide();
- 	})
+ 	});
+	$("#dinnerPreparationToSelectDish").click(function() {
+		view.show();
+	});
+	$("#selectTheDishesDiv").click(function(){
+	    view.show();
+	});
+	$("#dinnerOverviewToSelectDish").click(function() {
+		view.show();
+	});
 
  	$("#Guests").change(function(){
 

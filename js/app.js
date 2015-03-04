@@ -17,7 +17,13 @@ $(function() {
 	this.selectedDishInformationView = new SelectedDishInformationView(this.model);
 	this.selectedDishInformationViewController = new SelectedDishInformationViewController(this.selectedDishInformationView,this.model);
 	
+	this.dinnerOverviewView = new DinnerOverviewView(this.model);
+	this.dinnerOverviewViewController = new DinnerOverviewViewController(this.dinnerOverviewView, this.model);
 	
+	this.dinnerPreparationView = new DinnerPreparationView(this.model);
+	this.dinnerPreparationController = new DinnerPreparationController(this.dinnerPreparationView, this.model);
+	
+
 	//We instantiate our model
 	//And create the needed controllers and views
 	//var exampleView = new ExampleView($("#exampleView"));

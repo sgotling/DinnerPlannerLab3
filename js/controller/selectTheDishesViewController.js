@@ -13,6 +13,12 @@ var SelectTheDishesViewController = function (view) {
 		view.show();
 	});
 	
+	$("#dinnerPreparationToSelectDish").click(function() {
+		view.show();
+	});
+	$("#dinnerOverviewToSelectDish").click(function() {
+		view.show();
+	});
 
 	$("#selectTypeForm").change(function () {
 		view.updateImages();

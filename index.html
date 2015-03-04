@@ -120,14 +120,38 @@
     </div>  
   </div> <!-- selectedDishInformation end-->     
 
-  
+  <!-- Overview -->
+  <div id="Overview">
+    <div class='col-sm-12' id='selectdish'> 
+	<div class='col-sm-6'> 
+	  <h1>My Dinner: x people</h1> 
+	</div> 
+    <div class='col-sm-6'> 
+	  <button id='dinnerOverviewToSelectDish' type='button' style='float:right; padding:10pt; background:orange'>Go back and edit dinner</button> 
+	</div> 
+  </div> 
+  <div class='col-sm-12' id='dishOverviewPicturesDiv'> 
+	<div class='col-sm-12 col-centered' id='dishOverview'> 
+	  <div style='padding:10pt' id='overviewPict'> 
+	  </div> 
+	</div> 
+  </div> 
+  <div class='col-sm-12'> 
+	<button id='dinnerOverviewToDinnerPreparation' type='button' style='padding:10pt; background:orange'>Print Full Recipe</button> 
+  </div>  
+  </div> <!-- Overview is over-->
 
-
-
-	
-
-
-
+  <div id="DinnerPreparation">
+    <div class='inner'>  
+      <div class='col-sm-12' id='selectdish'> 
+        <div class='col-sm-12'> 
+          <h1>My Dinner:   numberOfGuests   people</h1> 
+          <button id='dinnerPreparationToSelectDish' type='button' style='float:right; padding:10pt; background:orange'>Go back and edit dinner</button> 
+        </div> 
+      </div> 
+      <div id='preparationList' ></div> 
+    </div>
+  </div> <!--dinnerPreparation is over-->
 
 
     </body>
@@ -144,6 +168,12 @@
 
 	  <script src='js/view/selectedDishInformationView.js'></script>
 	  <script src='js/controller/selectedDishInformationViewController.js'></script>
+	  
+	  <script src='js/view/OverviewView.js'></script>
+	  <script src='js/controller/OverviewController.js'></script>
+
+	  <script src='js/view/DinnerPreparationView.js'></script>
+	  <script src='js/controller/DinnerPreparationController.js'></script>
 	  
 	  
 
